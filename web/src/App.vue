@@ -1,30 +1,46 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <div >
+  <div>Bot昵称：{{ bot_name }}</div>
+  <div>Bot战力: {{ bot_rating }}</div>
+    </div>
+  <router-view/><router-view/>
 </template>
 
+<script>
+import $ from 'jquery';//通过ajax对后端取数据
+import {ref} from 'vue';//定义变量
+
+
+//固定写法
+export default{
+  name:"App",
+  setup:()=>{//整个函数的入口
+    let bot_name=ref("");
+    let bot_rating=ref("");
+    $.ajax({
+       url:"http://127.0.0.1:3000/pk/getbotinfo/",
+       type:"get",
+       success:resp =>{
+        bot_name.value=resp.name;
+        bot_rating.value=resp.rating;
+        console.log(resp);
+       }
+    });
+
+    return {
+      bot_name,
+      bot_rating
+    }
+
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+body{
+  background-image: url("./assets/background.png");
+  background-size: cover;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
