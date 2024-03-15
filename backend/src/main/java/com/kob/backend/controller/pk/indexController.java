@@ -9,6 +9,6 @@ public class indexController {
     @RequestMapping("index/")
     public String index(){
 
-        return "pk/index.html";
+        return "pk/index.html";//返回index页面
     }
 }
