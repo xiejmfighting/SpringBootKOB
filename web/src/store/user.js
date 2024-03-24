@@ -87,6 +87,7 @@ export default {
             context.commit("logout");
         }
 
-    }, modules: {
+    },
+    modules: {
     }
 }
