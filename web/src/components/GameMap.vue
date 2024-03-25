@@ -1,22 +1,24 @@
 <template>
-<div ref="parent" class="gamemap">
-    <canvas ref="canvas" tabindex="0"></canvas>
+    <div ref="parent" class="gamemap">
+        <canvas ref="canvas" tabindex="0"></canvas>
 
-</div>
+    </div>
 </template>
 
 <script>
-import {ref,onMounted} from 'vue';
-import {GameMap} from '@/assets/scripts/GameMap.js';
-export default{
+import { ref, onMounted } from 'vue';
+import { GameMap } from '@/assets/scripts/GameMap.js';
+import { useStore } from 'vuex';
+export default {
     setup() {
-        let parent=ref(null);
-        let canvas=ref(null);
-        onMounted(()=>{
-            new GameMap(canvas.value.getContext('2d'),parent.value)
+        const store = useStore();
+        let parent = ref(null);
+        let canvas = ref(null);
+        onMounted(() => {
+            new GameMap(canvas.value.getContext('2d'), parent.value, store)
         });
-        return{
-            parent,canvas
+        return {
+            parent, canvas, store
         }
     }
 }
@@ -24,7 +26,7 @@ export default{
 
 
 <style scoped>
-.gamemap{
+.gamemap {
     width: 100%;
     height: 100%;
     display: flex;
