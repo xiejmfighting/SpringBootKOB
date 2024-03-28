@@ -29,7 +29,6 @@ export class Snake extends AcGameObject {
 
     }
 
-
     start() {
 
     }
@@ -53,10 +52,6 @@ export class Snake extends AcGameObject {
         const k = this.cells.length;
         for (let i = k; i > 0; i--) {
             this.cells[i] = JSON.parse(JSON.stringify(this.cells[i - 1]));
-        }
-
-        if (!this.gamemap.check_valid(this.next_cell)) {
-            this.status = "die";//下一步操作撞了，蛇去世
         }
 
 
