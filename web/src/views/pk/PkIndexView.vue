@@ -2,6 +2,16 @@
   <PlayGround v-if="$store.state.pk.status === 'playing'" />
   <MatchGround v-if="$store.state.pk.status === 'matching'" />
   <ResultBoard v-if="$store.state.pk.loser !== 'none'"></ResultBoard>
+  <div v-if="$store.state.pk.status === 'playing' && $store.state.pk.a_id == $store.state.user.id">
+    <button type="button" class="btn btn-warning btn-lg" style="margin-left: 24%;">
+      您的角色是蓝蛇，位于左下角，网页端通过w,d,s,a(上，右，下，左)控制
+    </button>
+  </div>
+  <div v-else-if="$store.state.pk.status === 'playing' && $store.state.pk.b_id == $store.state.user.id">
+    <button type="button" class="btn btn-warning btn-lg" style="margin-left: 24%;">
+      您的角色是红蛇，位于右上角，网页端通过w,d,s,a(上，右，下，左)控制
+    </button>
+  </div>
 </template>
 
 <script>
