@@ -66,10 +66,12 @@ export default {
                     Authorization: "Bearer " + context.state.token,
                 }, success(resp) {
                     if (resp.error_message === "success") {
-                        context.commit("updateUser", {
-                            ...resp,
-                            is_login: true,
-                        });
+                        console.log(resp),
+                            context.commit("updateUser", {
+                                ...resp,
+                                is_login: true,
+
+                            });
                         data.success(resp);
                     }
                     else {
