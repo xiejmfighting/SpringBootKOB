@@ -33,7 +33,7 @@ public class WebSocketServer {
     private Session session=null;//每个链接用session维护
 
     //由于websocket是特殊的单例模式，每一个类同一时间只有一个实例，特殊注入数据库,需要注入set中
-    private static UserMapper userMapper;
+    public static UserMapper userMapper;
     public static RecordMapper recordMapper;
     public static RestTemplate restTemplate;
 
