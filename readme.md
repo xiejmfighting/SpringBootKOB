@@ -1,7 +1,7 @@
 KOB
 ![image](https://github.com/xiejmfighting/SpringBootKOB/assets/145442736/17ae34b0-88e2-4cb6-8238-4037bc9ddcef)
 ![image](https://github.com/xiejmfighting/SpringBootKOB/assets/145442736/e0c9a2b6-1b55-42df-b8d1-3767afdf84ae)
-![image](https://github.com/xiejmfighting/SpringBootKOB/assets/145442736/ca970722-979c-4a19-8770-e5a508dd1bce)
+
 ![image](https://github.com/xiejmfighting/SpringBootKOB/assets/145442736/e78259ee-5b32-4324-8063-8c38340f6b63)
 ![image](https://github.com/xiejmfighting/SpringBootKOB/assets/145442736/5f750e3a-29f1-42c8-862f-575da49a2e50)
 ![image](https://github.com/xiejmfighting/SpringBootKOB/assets/145442736/30e4ef6f-8dc5-43a0-9a47-6296128e9993)
