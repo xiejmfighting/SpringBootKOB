@@ -1,4 +1,6 @@
-KOB
+KOB游戏
+SpringBoot+Vue3
+主要技术：SpringBoot、Vue3、SpringCloud、MyBatis-Plus、MySql
 ![image](https://github.com/xiejmfighting/SpringBootKOB/assets/145442736/17ae34b0-88e2-4cb6-8238-4037bc9ddcef)
 ![image](https://github.com/xiejmfighting/SpringBootKOB/assets/145442736/e0c9a2b6-1b55-42df-b8d1-3767afdf84ae)
 ![image](https://github.com/xiejmfighting/SpringBootKOB/assets/145442736/6027f1b5-2826-434f-a1db-d844f13642bf)
